@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = off
+
+[*.js]
+indent_style = tab
+indent_size = 4
+
+[{package,babel.config,jest.config}.json]
+indent_style = space
+indent_size = 2
+
+[*.{js,jsx,ts,tsx,less,html}]
+indent_style = tab
+indent_size = 4
+ij_javascript_spaces_within_imports = true
+ij_javascript_spaces_within_object_literal_braces = true
