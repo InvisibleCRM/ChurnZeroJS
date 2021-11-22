@@ -20,7 +20,7 @@
     "churnzero",
     "typescript"
   ],
-  "author": "Andy Stannard <stannarda@gmail.com>",
+  "author": "Andy Stannard",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/astannard/ChurnZeroJS/issues"
