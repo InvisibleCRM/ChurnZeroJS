@@ -1,7 +1,7 @@
 {
-  "name": "@revenuegrid/churnzerojs",
+  "name": "@e-days/churnzerojs",
   "version": "1.0.0",
-  "description": "Typescript wrapper for ChurnZero JScript API",
+  "description": "Typescript wrapper for ChurnZero JScript API - based off @revenuegrid/churnzerojs but slight mod to be ES5 compatible",
   "main": "./dist/index.js",
   "typing": "./dist/index.d.ts",
   "files": [
@@ -20,12 +20,12 @@
     "churnzero",
     "typescript"
   ],
-  "author": "Vyacheslav Putsenko <vyacheslav.putsenko@revenuegrid.com>",
+  "author": "Andy Stannard <stannarda@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/InvisibleCRM/ChurnZeroJS/issues"
+    "url": "https://github.com/astannard/ChurnZeroJS/issues"
   },
-  "homepage": "https://github.com/InvisibleCRM/ChurnZeroJS#readme",
+  "homepage": "https://github.com/astannard/ChurnZeroJS#readme",
   "devDependencies": {
     "@types/faker": "^5.5.6",
     "@types/jest": "^26.0.23",
