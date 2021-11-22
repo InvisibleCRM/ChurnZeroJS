@@ -60,7 +60,7 @@ export interface ChurnZeroAPI {
 	ChurnZero: ChurnZero;
 }
 
-var churnZeroAPI: Partial<ChurnZeroAPI> = window as any;
+const churnZeroAPI: Partial<ChurnZeroAPI> = window as any;
 
 type ExposedMethods = Omit<Methods, 'setAppKey' | 'setContact' | 'stop'>;
 
@@ -75,7 +75,7 @@ export class Client implements ExposedMethods {
 	private static async embedScript(url: string) {
 		return new Promise<void>((resolve, reject) => {
 
-			var f = document.getElementsByTagName('script')[0], j = document.createElement('script');
+			const f = document.getElementsByTagName('script')[0], j = document.createElement('script');
 			j.async = true;
 			j.src = url;
 			j.crossOrigin = 'anonymous';
@@ -96,7 +96,7 @@ export class Client implements ExposedMethods {
 
 	static async connect(config: Config) {
 		await Client.embedScript(config.url);
-		var churnZero = churnZeroAPI.ChurnZero;
+		const churnZero = churnZeroAPI.ChurnZero;
 		if (!churnZero)
 			throw new Error('ChurnZero object is not initialized by embedded script.');
 

@@ -1,6 +1,6 @@
 {
-  "name": "@e-days/churnzerojs",
-  "version": "1.0.0",
+  "name": "churnzerojs-es5",
+  "version": "1.0.1",
   "description": "Typescript wrapper for ChurnZero JScript API - based off @revenuegrid/churnzerojs but slight mod to be ES5 compatible",
   "main": "./dist/index.js",
   "typing": "./dist/index.d.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InvisibleCRM/ChurnZeroJS.git"
+    "url": "git+https://github.com/astannard/ChurnZeroJS.git"
   },
   "keywords": [
     "churnzero",
