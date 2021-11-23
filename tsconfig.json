@@ -1,12 +1,17 @@
 {
 	"compileOnSave": true,
 	"compilerOptions": {
-		"target": "ES2019",
-		"module": "commonjs",
+		"target": "ES5",
+		"module": "esnext",
+		"lib": ["es5","DOM"], 
 		"moduleResolution": "node",
 		"declaration": true,
 		"outDir": "dist",
-		"strict": true
+		"strict": true,                           /* Enable all strict type-checking options. */
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"noImplicitReturns": true,
+		"esModuleInterop": true, 
 	},
 	"include": [
 		"src/**/*"
