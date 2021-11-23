@@ -1,6 +1,6 @@
 {
   "name": "churnzerojs-es5",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Typescript wrapper for ChurnZero JScript API - based off @revenuegrid/churnzerojs but slight mod to be ES5 compatible",
   "main": "./dist/index.js",
   "typing": "./dist/index.d.ts",

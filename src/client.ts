@@ -74,19 +74,22 @@ export interface Config {
 export class Client implements ExposedMethods {
 	private static async embedScript(url: string) {
 		return new Promise<void>((resolve, reject) => {
+			var scripts = document.getElementsByTagName('script');
+			if(!document.getElementById("ChurnZero")){
+				const f = document.getElementsByTagName('script')[0], j = document.createElement('script');
+				j.async = true;
+				j.src = url;
+				j.id = "ChurnZero"
+				j.crossOrigin = 'anonymous';
+				f.parentNode!.insertBefore(j, f);
 
-			const f = document.getElementsByTagName('script')[0], j = document.createElement('script');
-			j.async = true;
-			j.src = url;
-			j.crossOrigin = 'anonymous';
-			f.parentNode!.insertBefore(j, f);
+				j.onload = () => {
+					resolve();
+				};
 
-			j.onload = () => {
-				resolve();
-			};
-
-			j.onerror = (event, source, lineno, colno, error) => {
-				reject(new Error(`Failed to load ChurnZero script. ${typeof event == 'string' ? event : ''} ${error?.message}`));
+				j.onerror = (event, source, lineno, colno, error) => {
+					reject(new Error(`Failed to load ChurnZero script. ${typeof event == 'string' ? event : ''} ${error?.message}`));
+				}
 			}
 		});
 	}
